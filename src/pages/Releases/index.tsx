@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container } from './styled';
 import { Link } from 'react-router-dom';
+
 const Releases: React.FC = () => {
   return (
     <Container>

@@ -10,7 +10,9 @@ export const Container = styled.div`
     line-height: 2.33rem;
     color: var(--text-items);
 
-    /* @media (min-width:) */
+    @media (min-width: 961px) and (max-width: 1700px) {
+      padding: 0 1rem;
+    }
     margin-bottom: 2rem;
 
     > strong {
@@ -19,10 +21,20 @@ export const Container = styled.div`
       border-bottom: 1px solid var(--opacity-border-bottom);
     }
   }
+  > ol li {
+    @media (min-width: 961px) and (max-width: 1700px) {
+      margin: 10px;
+    }
+  }
+  > ol {
+    @media (min-width: 961px) and (max-width: 1700px) {
+      display: inline-flex;
+    }
+  }
   > ol li a {
     color: var(--text-list);
     text-decoration: none;
     border-bottom: 1px solid var(--opacity-border-bottom);
-    line-height: 2.4rem;
+    line-height: 2.6rem;
   }
 `;

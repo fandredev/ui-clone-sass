@@ -2,9 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   display: grid;
-  @media (max-width: 640px) {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-template-rows: 1fr;
+  @media (max-width: 960px) {
     grid-template-areas:
       'warning'
       'header'
@@ -12,6 +10,15 @@ export const Container = styled.div`
       'releases'
       'main'
       'footer';
+  }
+  @media (min-width: 961px) and (max-width: 1700px) {
+    grid-template-areas:
+      'warning warning warning'
+      'header header header'
+      'banner banner banner'
+      'releases releases releases'
+      'main main main'
+      'footer footer footer';
   }
 `;
 export const WarningWrapper = styled.section`
