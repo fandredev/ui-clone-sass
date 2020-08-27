@@ -1,10 +1,10 @@
-import React from 'react';
-import Warning from '../Warning';
-import Header from '../Header';
-import Banner from '../Banner';
-import Main from '../Main';
-import Releases from '../Releases';
-import Footer from '../Footer';
+import React, { useEffect, useState } from 'react';
+import Warning from '../../components/Warning';
+import Header from '../../components/Header';
+import Banner from '../../components/Banner';
+import Main from '../../components/Main';
+import Releases from '../../components/Releases';
+import Footer from '../../components/Footer';
 import {
   Container,
   WarningWrapper,
@@ -15,28 +15,66 @@ import {
   FooterWrapper,
 } from './styled';
 
+import { ThemeProvider } from 'styled-components';
+import * as themes from '../../globals/utils';
+import { VscColorMode } from 'react-icons/vsc';
+
+const {
+  themes: { Dark, Light },
+} = themes;
+
 const Layout: React.FC = () => {
+  const [theme, setTheme] = useState('light');
+
+  function handleAlterTheme(): void {
+    const { localStorage } = window;
+    const { style } = document.body;
+
+    if (theme === 'light') {
+      style.background = Dark.body;
+      style.transition = 'all 0.25s linear';
+      style.color = Dark.text;
+      localStorage.setItem('theme', 'dark');
+      setTheme('dark');
+    } else {
+      window.localStorage.setItem('theme', 'light');
+      style.background = Light.body;
+      style.transition = 'all 0.25s linear';
+      style.color = Light.text;
+      setTheme('light');
+    }
+  }
+  useEffect(() => {
+    const themes = window.localStorage.getItem('theme');
+    themes && setTheme(themes);
+  }, []);
+
   return (
-    <Container>
-      <WarningWrapper>
-        <Warning />
-      </WarningWrapper>
-      <HeaderWrapper>
-        <Header />
-      </HeaderWrapper>
-      <BannerWrapper>
-        <Banner />
-      </BannerWrapper>
-      <ReleasesWrapper>
-        <Releases />
-      </ReleasesWrapper>
-      <MainWrapper>
-        <Main />
-      </MainWrapper>
-      <FooterWrapper>
-        <Footer />
-      </FooterWrapper>
-    </Container>
+    <ThemeProvider theme={theme === 'dark' ? Dark : Light}>
+      <Container>
+        <WarningWrapper>
+          <Warning />
+        </WarningWrapper>
+        <HeaderWrapper>
+          <Header />
+        </HeaderWrapper>
+        <BannerWrapper>
+          <Banner />
+        </BannerWrapper>
+        <ReleasesWrapper>
+          <Releases />
+        </ReleasesWrapper>
+        <MainWrapper>
+          <Main />
+        </MainWrapper>
+        <FooterWrapper>
+          <Footer />
+          <button onClick={handleAlterTheme}>
+            <VscColorMode />
+          </button>
+        </FooterWrapper>
+      </Container>
+    </ThemeProvider>
   );
 };
 

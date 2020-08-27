@@ -7,7 +7,10 @@ const Releases: React.FC = () => {
     <Container>
       <ol>
         <li>
-          <Link to="#">Current Releases:</Link>
+          <Link style={{ textDecoration: 'none', cursor: 'default' }} to="#">
+            {/* coisa feia */}
+            Current Releases:
+          </Link>
         </li>
         <li>
           <Link to="#">Dart Sass&nbsp; 1.26.10</Link>

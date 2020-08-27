@@ -1,9 +1,12 @@
 import styled from 'styled-components';
-
 export const Container = styled.div`
   padding: 4rem 4rem 0;
   > img {
     width: 20%;
+    &:hover {
+      background: var(--opacity-border-bottom);
+      cursor: pointer; /* só pra ficar com a maozinha inves de colocar a tag link */
+    }
     @media (min-width: 640px) {
       max-width: 25%;
     }
@@ -32,6 +35,9 @@ export const Container = styled.div`
       font-size: 1.7rem;
       font-weight: 900;
       line-height: 5rem;
+      &:hover {
+        background: var(--opacity-border-bottom);
+      }
       > form {
         > input {
           padding: 0.8rem;
@@ -65,13 +71,14 @@ export const Title = styled.h1`
   text-align: center;
   font-weight: 400;
   margin: 2rem;
-
+  @media (min-width: 640px) {
+    font-size: 1.6em;
+    margin: 0;
+  }
   @media (max-width: 960px) {
     font-size: 2em;
   }
-  @media (max-width: 390px) {
-    font-size: 1.5em;
-  }
+
   @media (min-width: 961px) and (max-width: 1700px) {
     font-size: 4.5em;
   }

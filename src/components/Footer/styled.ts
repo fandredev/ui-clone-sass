@@ -22,6 +22,9 @@ export const Container = styled.div`
     }
   }
   > ol li {
+    &:focus {
+      background: var(--links-hover);
+    }
     @media (min-width: 961px) and (max-width: 1700px) {
       margin: 10px;
     }

@@ -6,13 +6,16 @@ export const Container = styled.div`
     font-size: 1.8rem;
     margin-bottom: 2rem;
     line-height: 2.7rem;
-
-    @media (max-width: 960px) {
-      font-size: 1.6em;
-      font-weight: bold;
+    @media (min-width: 320px) and (max-width: 600px) {
+      font-size: 1.2em;
+      line-height: 3.3rem;
+      margin-top: 2rem;
+    }
+    @media (min-width: 601px) and (max-width: 960px) {
+      font-size: 1.7em;
       margin-bottom: 2rem;
-      line-height: 4.7rem;
-      padding: 0 4rem;
+      line-height: 3.6rem;
+      padding: 0 2rem;
     }
     @media (min-width: 961px) and (max-width: 1700px) {
       ${fullAlignCenterMobile}

@@ -18,8 +18,8 @@ export const Container = styled.div`
 `;
 export const WrapperItem = styled.section`
   font-weight: 600;
-  @media (max-width: 640px) {
-    padding: 2rem;
+  @media (min-width: 320px) and (max-width: 640px) {
+    padding: 0;
   }
 
   > span {
@@ -37,6 +37,9 @@ export const WrapperItem = styled.section`
     }
 
     > strong {
+      &:focus {
+        background: var(--links-hover);
+      }
       color: var(--text-list);
       text-decoration: none;
       border-bottom: 1px solid var(--opacity-border-bottom);

@@ -8,12 +8,19 @@ export const Container = styled.div`
   > h5 {
     font-size: 2.5rem;
     font-weight: 600;
+
+    @media (min-width: 961px) and (max-width: 1700px) {
+      font-size: 3.5rem;
+    }
   }
   > p {
     font-weight: 600;
     font-size: 1.77rem;
     margin-top: 2.3rem;
     line-height: 2.5rem;
+    @media (min-width: 961px) and (max-width: 1700px) {
+      font-size: 1.6rem;
+    }
   }
 `;
 

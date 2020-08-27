@@ -16,6 +16,9 @@ export const Container = styled.div`
       ${fullAlignCenterMobile};
     }
     > li {
+      &:hover {
+        background: var(--releases-hover);
+      }
       @media (min-width: 961px) and (max-width: 1700px) {
         margin: 0 1rem;
       }
