@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Container, Title } from './styled';
 import { Link } from 'react-router-dom';
+import { Container, Title } from './styled';
 import logo from '../../assets/images/logo.svg';
 
 const Header: React.FC = () => {
@@ -33,7 +33,7 @@ const Header: React.FC = () => {
                 placeholder="Search"
                 aria-required="false"
                 value={search}
-                onChange={(e) => setSearch(e.target.value)}
+                onChange={e => setSearch(e.target.value)}
                 name="search"
                 id="search"
               />

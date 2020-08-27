@@ -1,0 +1,17 @@
+{
+  "short_name": "Ui-Clone-Sass",
+  "name": "Clone do Pré Processador SASS",
+
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "favicon.ico",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}

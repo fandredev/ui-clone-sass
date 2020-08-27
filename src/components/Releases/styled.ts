@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { fullAlignCenterMobile } from '../../globals/utils';
+
 export const Container = styled.div`
   ${fullAlignCenterMobile};
   background: var(--releases);

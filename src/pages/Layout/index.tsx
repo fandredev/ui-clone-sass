@@ -1,4 +1,8 @@
+/* eslint-disable no-unused-expressions */
+/* eslint-disable no-shadow */
 import React, { useEffect, useState } from 'react';
+import { ThemeProvider } from 'styled-components';
+import { VscColorMode } from 'react-icons/vsc';
 import Warning from '../../components/Warning';
 import Header from '../../components/Header';
 import Banner from '../../components/Banner';
@@ -15,9 +19,7 @@ import {
   FooterWrapper,
 } from './styled';
 
-import { ThemeProvider } from 'styled-components';
 import * as themes from '../../globals/utils';
-import { VscColorMode } from 'react-icons/vsc';
 
 const {
   themes: { Dark, Light },
@@ -69,7 +71,7 @@ const Layout: React.FC = () => {
         </MainWrapper>
         <FooterWrapper>
           <Footer />
-          <button onClick={handleAlterTheme}>
+          <button type="button" onClick={handleAlterTheme}>
             <VscColorMode />
           </button>
         </FooterWrapper>
