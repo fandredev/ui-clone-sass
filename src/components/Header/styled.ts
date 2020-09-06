@@ -33,9 +33,7 @@ export const Container = styled.div`
       margin: 0;
     }
     > li {
-      font-size: 1.7rem;
-      font-weight: 900;
-      line-height: 5rem;
+      font: normal normal 900 1.7rem/5rem var(--default-font);
       &:hover {
         background: var(--opacity-border-bottom);
       }
@@ -67,10 +65,9 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.h1`
-  font-size: 1.4em;
+  font: normal normal 400 1.4em var(--default-font);
   color: var(--text-items);
   text-align: center;
-  font-weight: 400;
   margin: 2rem;
   @media (min-width: 640px) {
     font-size: 1.6em;

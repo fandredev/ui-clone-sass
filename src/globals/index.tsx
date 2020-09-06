@@ -32,7 +32,7 @@ export default createGlobalStyle`
     list-style: none;
   }
   button {
-        margin: 0;
+    margin: 0;
     border: 0;
     cursor: pointer;
   }
@@ -43,7 +43,8 @@ export default createGlobalStyle`
     --focus-input:#fd6a02;
     --sass-text: #699;
     --opacity-border-bottom: rgba(218,219,223,0.5);
-    --releases-hover:rgba(0,0,0,0.0625)
-    --links-hover:rgba(218,219,223,0.25)
+    --releases-hover:rgba(0,0,0,0.0625);
+    --links-hover:rgba(218,219,223,0.25);
+    --default-font: 'Source Sans Pro Light'
   }
 `;

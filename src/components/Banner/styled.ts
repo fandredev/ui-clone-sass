@@ -4,12 +4,10 @@ import { fullAlignCenterMobile } from '../../globals/utils';
 export const Container = styled.div`
   > p {
     color: var(--sass-text);
-    font-size: 1.8rem;
+    font: normal normal initial 1.8rem/2.7rem var(--default-font);
     margin-bottom: 2rem;
-    line-height: 2.7rem;
     @media (min-width: 320px) and (max-width: 600px) {
-      font-size: 1.2em;
-      line-height: 3.3rem;
+      font: normal normal initial 1.2em/3.3rem var(--default-font);
       margin-top: 2rem;
     }
     @media (min-width: 601px) and (max-width: 960px) {

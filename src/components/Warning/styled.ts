@@ -6,18 +6,15 @@ export const Container = styled.div`
   color: #fff;
 
   > h5 {
-    font-size: 2.5rem;
-    font-weight: 600;
+    font: normal normal 600 2.5rem var(--default-font);
 
     @media (min-width: 961px) and (max-width: 1700px) {
       font-size: 3.5rem;
     }
   }
   > p {
-    font-weight: 600;
-    font-size: 1.77rem;
+    font: normal normal 600 1.77rem/2.5rem var(--default-font);
     margin-top: 2.3rem;
-    line-height: 2.5rem;
     @media (min-width: 961px) and (max-width: 1700px) {
       font-size: 1.6rem;
     }

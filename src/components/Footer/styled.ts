@@ -6,8 +6,7 @@ export const Container = styled.div`
   margin: 3rem 0;
 
   > p {
-    font-size: 1.66rem;
-    line-height: 2.33rem;
+    font: normal normal 600 1.66rem/2.33rem var(--default-font);
     color: var(--text-items);
 
     @media (min-width: 961px) and (max-width: 1700px) {

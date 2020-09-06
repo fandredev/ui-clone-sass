@@ -8,12 +8,12 @@ export const Container = styled.div`
   @media (max-width: 960px) {
     grid-template-columns: repeat(auto-fit, minmax(250px, 2fr));
     padding: 3rem;
-    grid-gap: 6rem;
+    gap: 6rem;
   }
   @media (min-width: 961px) and (max-width: 1700px) {
     grid-template-columns: 1fr 1fr 1fr;
     padding: 4rem;
-    grid-gap: 4rem;
+    gap: 4rem;
   }
 `;
 export const WrapperItem = styled.section`

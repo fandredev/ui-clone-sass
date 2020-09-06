@@ -26,9 +26,7 @@ export const Container = styled.div`
 
       > a {
         color: #fff;
-        font-size: 1.77rem;
-        font-weight: 600;
-        line-height: 2.66rem;
+        font: normal normal 600 1.77rem/2.66rem var(--default-font);
       }
     }
   }
